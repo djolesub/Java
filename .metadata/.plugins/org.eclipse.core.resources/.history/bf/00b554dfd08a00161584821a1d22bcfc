@@ -1,0 +1,18 @@
+
+public class TestString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = "Djordje";
+		String b = "Djordje";
+		String c = "Djordje"; 
+		String d = c;
+		
+		System.out.printf("%S,%S,%S",a,b,c,d);
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,41 @@
+package integerStack;
+
+import java.util.Arrays;
+
+public class MyIntegerStack implements IntegerStack{
+	//Defining fields 
+	private int top;
+	private int[] data;
+	private static final int DEFAULT_CAPACITY = 10;
+	
+	//Constructor
+	public MyIntegerStack(){
+		this.top = -1;
+		this.data = new int[DEFAULT_CAPACITY];
+	}
+	
+	public MyIntegerStack(int capacity){
+		this.top=-1;
+		this.data = new int[capacity];
+	} 
+	
+	public MyIntegerStack(int[] array){
+		this.top=-1;
+		this.data = Arrays.copyOf(array, array.length);
+	}
+	
+	//Methods 
+	public boolean isEmpty(){
+		return this.top == -1;
+	}
+	public int peek(){
+		return this.data.
+	}
+	public int pop(){}
+	public void push(int item){
+		if(top == data.length - 1){
+			
+		}
+	}
+	public int size(){}
+}

@@ -1,0 +1,41 @@
+package studentTeacher;
+
+public class Student extends Person{
+	//Defining fields 
+	private int numCourses;
+	private String[] courses;
+	private int[] grades;
+	
+	//Defining Constructor 
+	public Student(){
+		super();
+	}
+	
+	//Adding Course Grade 
+	public void addCourseGrade(String course,int grade){
+		
+	}
+	
+	//Printing all grades 
+	public void printGrades(){
+		System.out.println("The grades of student "+this.getName()+" are:");
+		for(int a:grades){
+			System.out.println(a);
+		}
+	} 
+	
+	public double getAvgGrade(){
+		double sum = 0;
+		int num = grades.length;
+		
+		for(double a: grades){
+			sum+=a;
+		} 
+		
+		double avg = sum/num;
+		return avg;
+	}
+	
+	
+	
+}

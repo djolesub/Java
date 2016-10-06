@@ -1,0 +1,15 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Animal an = new Animal("Red","Fox",27);
+		System.out.println("Animal 1, an: ");
+		System.out.println("Color is: "+an.getColor());
+		System.out.println("Age is: "+an.getAge());
+		System.out.println("Number of created animals is: "+Animal.numAnim);
+		
+		
+		
+	}
+
+}

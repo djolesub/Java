@@ -1,0 +1,19 @@
+
+public class TestString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = "Djordje";
+		String b = "Djordje";
+		String c = "Djordje"; 
+		String d = c;
+		c=  "Djordje Promena";
+		
+		System.out.printf("%S,%S,%S,\t%S",a,b,c,d);
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package Composition;
+
+public class TestAuthor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Author auth1 = new Author("Djordje", "djolesub@gmail.com", 'm');
+		Author auth2 = new Author("Pavle", "pajo@gmail.com", 'm');
+		Author auth3 = new Author("Djordje", "milenica@gmail.com", 'f'); 
+		
+		System.out.println("Data about Djole");
+		System.out.println(auth1.getName());
+		System.out.println(auth1.getEmail());
+		System.out.println(auth1.getGender());
+		System.out.println(auth1);
+		
+		
+		
+		
+	}
+
+}

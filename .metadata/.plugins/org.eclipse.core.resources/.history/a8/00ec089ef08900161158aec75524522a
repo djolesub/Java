@@ -1,0 +1,27 @@
+package linkedList;
+import java.util.*;
+
+public class LinkedListExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<String> students = new LinkedList<String>();
+		students.add("Djordje Subotic");
+		students.add("Pavle Kovacevic");
+		students.add("Milena Kovacevic");
+		students.add("Filip Sulovic");
+		students.add("Darko Selakovic"); 
+		
+		for(String a:students){
+			System.out.println(a);
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

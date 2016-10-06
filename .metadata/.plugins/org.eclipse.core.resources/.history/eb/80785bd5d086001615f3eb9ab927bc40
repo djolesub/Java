@@ -1,0 +1,57 @@
+package Composition;
+
+public class Book {
+	private String name;
+	private Author author;
+	private double price;
+	private int qyt;
+	
+	public Book(String name,Author author,double price,int qyt){
+		this.name = name;
+		this.author = author;
+		this.price = price;
+		this.qyt = qyt;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQyt() {
+		return qyt;
+	}
+
+	public void setQyt(int qyt) {
+		this.qyt = qyt;
+	}
+	
+	public String toString(){
+		return "'"+name+" by "+author.getName()+"("+author.getGender()+")"+" at "+author.getEmail();
+	}
+	
+	
+	
+	
+	
+
+}

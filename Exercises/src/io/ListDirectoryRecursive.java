@@ -1,0 +1,29 @@
+package io;
+import java.io.File;
+
+public class ListDirectoryRecursive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File dir = new File("D:\\");
+		//listRecursive(dir);
+		createDir(dir);
+	}
+		
+	public static void listRecursive(File file){
+		if(file.isDirectory()){
+			File[] files = file.listFiles();
+			for(File f:files){
+				System.out.println(f.getAbsolutePath());
+				if(f.isDirectory()) listRecursive(f);
+			}
+		}
+	}
+	
+	public static void createDir(File dir){
+		System.out.println(dir.getFreeSpace());
+	}
+	
+}
+
+

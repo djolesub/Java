@@ -1,0 +1,23 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Animal an = new Animal("Red","Fox",27);
+		System.out.println("Animal 1 data: ");
+		System.out.println("Color is: "+an.getColor());
+		System.out.println("Age is: "+an.getAge());
+		System.out.println("Number of created animals is: "+Animal.getNum());
+		System.out.println();
+		Animal an1 = new Animal("Yellow","Dog",20);
+		System.out.println("Animal 2 data: ");
+		System.out.println("Color is: "+an1.getColor());
+		System.out.println("Age is: "+an1.getAge());
+		System.out.println("Number of created animals is: "+Animal.getNum());
+		System.out.println();
+		
+		
+		
+		
+	}
+
+}

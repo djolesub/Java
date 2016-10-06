@@ -1,0 +1,5 @@
+package integerStack;
+
+public interface IntegerStack {
+
+}

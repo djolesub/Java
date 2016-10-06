@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<Integer,String> names = new HashMap<Integer,String>();
+		names.put(1,"Djordje");
+		names.put(2,"Pavle");
+		names.put(3,"Milena");
+		
+	}
+
+}

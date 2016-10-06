@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PriorityQueue<String> niz = new PriorityQueue<String>(); 
+		niz.add("DJordje");
+		niz.add("Subotic");
+		niz.add("Pavle"); 
+		
+		System.out.println(niz.element());
+		
+		LinkedList<String> nums = new LinkedList<String>(); 
+		nums.add("Paca");
+		nums.add("Djordje");
+		nums.add("Mikics"); 
+		
+		System.out.println(nums.element());
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

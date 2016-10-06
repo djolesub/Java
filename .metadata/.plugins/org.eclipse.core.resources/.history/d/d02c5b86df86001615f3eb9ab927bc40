@@ -1,0 +1,28 @@
+package point_line;
+
+public class TestLine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Creating two points
+		Point2D p1 = new Point2D(20,10);
+		Point2D p2 = new Point2D(100,200); 
+		
+		//Creating Line object 
+		
+		Line l1 = new Line(p1,p2); 
+		System.out.println("Information about line l1"); 
+		System.out.println("Begin point is: "+l1.getBegin());
+		System.out.println("End point is: "+l1.getEnd());
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Collections niz = new ArrayList<String>();
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

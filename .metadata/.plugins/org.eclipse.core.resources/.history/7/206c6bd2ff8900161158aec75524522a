@@ -1,0 +1,24 @@
+package linkedHashSet;
+import java.util.*;
+
+public class LinkedHash {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedHashSet<String> students = new LinkedHashSet<String>();
+		students.add("Djordje");
+		students.add("Djordje");
+		students.add("Djordje");
+		students.add("Milena");
+		students.add("Pavle");
+		students.add("Milena");
+		students.add("Djordje");
+		
+		
+		
+		
+		
+		
+	}
+
+}

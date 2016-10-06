@@ -1,0 +1,22 @@
+package Exceptions;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double cm;
+		double inch;
+		
+		Scanner in= new Scanner(System.in); 
+		System.out.println("Unesi vrednost u incima:");
+		inch = in.nextDouble();
+		System.out.printf("Unesena vrednost u centimetrima iznosi:%.4f",inch);
+		
+		
+		
+		
+	}
+
+}

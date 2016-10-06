@@ -1,0 +1,16 @@
+package point_line;
+
+public class TestPoint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Point2D p1 = new Point2D(20,10);
+		System.out.println("Information about point p1:");
+		System.out.println("P1 point toString method: "p1);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PriorityQueue<String> niz = new PriorityQueue<String>(); 
+		niz.add("DJordje");
+		niz.add("Subotic");
+		niz.add("Pavle"); 
+		
+		Sysytem.out.println(niz.poll());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

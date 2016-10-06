@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Vezba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your number of years");
+		int age = scan.nextInt();
+		System.out.println("Enter your name and Last Name");
+		String name= scan.next();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

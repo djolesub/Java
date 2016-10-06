@@ -1,0 +1,66 @@
+package point_line;
+
+public class Point2D {
+	private double x;
+	private double y; 
+	
+	public Point2D(double x,double y){
+		this.x = x;
+		this.y = y;
+	}  
+	
+	public Point2D(){
+		this.x = 0;
+		this.y = 0;
+	}
+
+	public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}   
+	
+	public String toString(){
+		return "\"("+x+","+y+")\"";
+	}
+	
+	public double[] getXY(){
+		double[] res =  {this.x,this.y};
+		return res;
+	} 
+	
+	public void setXY(double x,double y){
+		this.x = x;
+		this.y = y;
+	} 
+	
+	public double distance(double x,double y){
+		return Math.sqrt(Math.pow((this.x - x),2) + Math.pow((this.y - y),2));
+	}
+	
+	public double distance(Point2D p){
+		return Math.sqrt(Math.pow((this.x - p.getX()),2) + Math.pow((this.y - p.getY()),2));
+	}
+	
+	public double distance(){
+		 return Math.sqrt(Math.pow((this.x),2) + Math.pow((this.y),2));
+	}
+	
+	
+	
+	
+	}
+	
+	
+	
+}

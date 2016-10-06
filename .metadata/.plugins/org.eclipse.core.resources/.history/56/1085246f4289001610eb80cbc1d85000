@@ -1,0 +1,27 @@
+package io;
+import java.io.*;
+
+public class InputStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			FileInputStream file = new FileInputStream("C:\\createFile.txt");
+			int a = file.read(); 
+			while(a != -1){
+				System.out.println(a);
+			}
+		
+		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

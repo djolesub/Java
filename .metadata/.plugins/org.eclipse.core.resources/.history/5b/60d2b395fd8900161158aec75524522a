@@ -1,0 +1,17 @@
+package hashSet;
+
+public class TestReader {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		InputReader ir = new InputReader();
+		ir.getInput();
+		for(String word: ir.getInput()){
+			System.out.println(word);
+		}
+		
+		
+		
+	}
+
+}

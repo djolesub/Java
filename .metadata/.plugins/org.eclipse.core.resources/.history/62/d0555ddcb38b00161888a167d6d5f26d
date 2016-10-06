@@ -1,0 +1,22 @@
+package io;
+import java.io.*;
+
+public class AgainInputs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try{
+			FileInputStream fis = new FileInputStream(new File("D:\\createFile.txt"));
+			int by = fis.read();
+			System.out.println((char)by);
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
+}

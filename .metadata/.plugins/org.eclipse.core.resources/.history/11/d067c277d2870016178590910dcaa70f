@@ -1,0 +1,26 @@
+package Networking;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class SimpleSocketListener {
+	ServerSocket server;
+	int serverPort = 8888;
+	
+	//Constructor for alocate ServerSocket listenng at given port 
+	
+	public SimpleSocketListener(){
+		try {
+			server = new ServerSocket(serverPort);
+			System.out.println("Server Socket "+server);
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+}

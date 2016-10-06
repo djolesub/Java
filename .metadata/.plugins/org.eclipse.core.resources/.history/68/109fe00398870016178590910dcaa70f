@@ -1,0 +1,14 @@
+package rectangleTriangle;
+
+public  class Shape {
+	//Defining Fields 
+	protected String color;
+	
+	public Shape(String color){
+		this.color = color;
+	} 
+	
+	
+	
+	
+}

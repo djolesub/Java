@@ -1,0 +1,34 @@
+package linkedList;
+import java.util.*;
+
+public class LinkedListExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<String> students = new LinkedList<String>();
+		students.add("Djordje Subotic");
+		students.add("Pavle Kovacevic");
+		students.add("Milena Kovacevic");
+		students.add("Filip Sulovic");
+		students.add("Darko Selakovic"); 
+		
+		//Looping trough LinkedList
+		System.out.println("Looping Using foreach loop");
+		for(String a:students){
+			System.out.println(a);
+		}
+		
+		System.out.println("Looping Using for loop");
+		System.out.println("ID\tFull Name");
+		for(int i = 0;i<students.size();i++){
+			System.out.println("i\t%s"+students[i]);
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

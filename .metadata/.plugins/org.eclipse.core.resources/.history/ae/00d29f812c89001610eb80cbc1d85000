@@ -1,0 +1,10 @@
+package enumType;
+
+public class EnumFruit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

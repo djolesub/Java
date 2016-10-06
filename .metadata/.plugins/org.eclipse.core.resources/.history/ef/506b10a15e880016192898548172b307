@@ -1,0 +1,27 @@
+package Exceptions;
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.File;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner in = new Scanner(new File("text.txt"));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

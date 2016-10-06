@@ -1,0 +1,3 @@
+CONTENT_ASSIST_USER_AGENT_FILTER_TYPE=none
+eclipse.preferences.version=1
+selectUserAgents=com.aptana.editor.php.phpNature\:Chrome,Mozilla,IE;com.aptana.projects.webnature\:Mozilla,Chrome,IE;org.radrails.rails.core.railsnature\:Mozilla,Chrome,IE;com.aptana.ruby.core.rubynature\:Mozilla,Chrome,IE
