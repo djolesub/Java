@@ -1,0 +1,19 @@
+package intro;
+import java.io.IOException;
+import java.net.*;
+
+public class WhoisSocket {	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c;
+		//Create socket connected to internic.net ,port 43 
+		try(Socket soc = new Socket("whois.internic.net",43)){
+			
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+	
+	}
+
+}

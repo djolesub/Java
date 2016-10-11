@@ -1,0 +1,49 @@
+package intro;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DB{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try (
+			//Allocate Database Connection Object
+			Connection conn = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/javaDB?useSSL=false","root","coperman");
+			//Allocate Statment object in connection
+				Statement stmt = conn.createStatement();
+			)
+			{
+				//Execute SQL query. Query result is returned in Result Object 
+				String sql = "SELECT * FROM books"; 
+				System.out.println("The SQL Query is: "+sql+"\n");
+				ResultSet rset = stmt.executeQuery(sql); 
+				
+				//Processing ResultSet 
+				System.out.println("Records in Database are:");
+				int rowCount = 0;
+				while(rset.next()){
+					int id = rset.getInt("id");
+					String title = rset.getString("title");
+					String author = rset.getString("author");
+					int price = rset.getInt("price");
+					int qty = rset.getInt("qty"); 
+					rowCount++;
+				}
+				System.out.println("Total Number Of Records is: "+rowCount);
+			}
+		catch(SQLException ex){
+			ex.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
+}
+

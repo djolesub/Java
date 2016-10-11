@@ -1,0 +1,24 @@
+package intro;
+
+import java.net.*;
+import java.io.*;
+
+public class WhoisSocket {	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c;
+		//Create socket connected to internic.net ,port 43 
+		try(Socket soc = new Socket("whois.internic.net",43)){
+			System.out.println(soc.getPort());
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		//Input and output stream 
+		InputStream is = soc.getInputStream();
+		OutputStream os = soc.getOutputStream();
+	
+	}
+
+}

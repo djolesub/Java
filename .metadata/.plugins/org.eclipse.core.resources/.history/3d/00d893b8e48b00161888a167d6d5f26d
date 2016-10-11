@@ -1,0 +1,19 @@
+package intro;
+import java.net.*;
+
+public class NetworksIntro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			InetAddress ip = InetAddress.getByName("www.google.com");
+		}
+		catch(UnknownHostException e){
+			e.printStackTrace(s);
+		}
+		
+		
+		
+	}
+
+}

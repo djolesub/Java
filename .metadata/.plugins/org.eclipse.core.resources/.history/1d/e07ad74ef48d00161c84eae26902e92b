@@ -1,0 +1,60 @@
+package gridPane;
+
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane; 
+import javafx.scene.layout.GridPane; 
+import javafx.geometry.Insets;
+import javafx.scene.control.TextField;
+
+public class Main extends Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		launch(args);
+	}
+	
+	public void start(Stage stage) throws Exception {
+		stage.setTitle("GridPane");
+		GridPane grid = new GridPane();
+		grid.setPadding(new Insets(10,10,10,10));
+		grid.setVgap(8);
+		grid.setHgap(8);
+		
+		//Username label  and TExt Field
+		Label usernameLabel = new Label("Username");
+		Text usrText = new Text();
+		GridPane.setConstraints(usernameLabel,1,1);
+		GridPane.setConstraints(usernameLabel,1,2);
+		
+		//Password label  and Text Field
+		Label passwordLabel = new Label("Password");
+		TextField passText = new TextField();
+		passText.setPromptText("I am prompt text");
+		GridPane.setConstraints(usernameLabel,2,1);
+		GridPane.setConstraints(usernameLabel,2,2);
+		
+		Button loginButton = new Button("Login");
+		GridPane.setConstraints(usernameLabel,3,2); 
+		grid.getChildren().addAll(usernameLabel,usrText,passwordLabel,passText,loginButton);
+		
+		Scene scene = new Scene(grid,500,500);
+		stage.setScene(scene);
+		stage.show();
+	}
+
+}

@@ -1,0 +1,43 @@
+package intro;
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+
+
+public class Intro extends Application implements EventHandler<ActionEvent>{
+	Button btn;
+	@Override 
+	public void start(Stage stage){
+		
+		stage.setTitle("First GUI");
+		btn = new Button("CLICK");
+		btn.setOnAction(this);
+		StackPane layout = new StackPane();
+		layout.getChildren().add(btn);
+	
+		
+		Scene scene = new Scene(layout,600,600);
+		stage.setScene(scene);
+		stage.show();
+	};
+		
+	@Override 
+	public void handle(ActionEvent event){
+		if(event.getSource() == btn){
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			launch(args);
+	}
+	
+
+}

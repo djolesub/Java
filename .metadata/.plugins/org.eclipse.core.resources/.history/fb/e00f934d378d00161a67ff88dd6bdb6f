@@ -1,0 +1,26 @@
+package intro;
+import javafx.*;
+import javafx.scene.control.Button;
+
+
+public class Intro extends Application{
+	
+	@Override 
+	public void start(Stage primaryStage){
+		Button btn = new Button();
+		btn.setText("Say hello World");
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		
+	}
+
+}

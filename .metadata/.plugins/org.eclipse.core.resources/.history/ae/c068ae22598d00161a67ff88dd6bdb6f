@@ -1,0 +1,10 @@
+package windowsComunication;
+
+public class WindowsComunication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

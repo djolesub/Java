@@ -1,0 +1,24 @@
+package intro;
+import java.net.*;
+
+public class HTTP {
+
+	public static void main(String[] args) throws Exeption {
+		// TODO Auto-generated method stub
+		try {
+			URL url = new URL("http://www.google.com");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		}
+		catch(MalformedURLException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

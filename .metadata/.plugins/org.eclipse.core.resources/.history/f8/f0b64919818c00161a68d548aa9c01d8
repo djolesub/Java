@@ -1,0 +1,16 @@
+package intro;
+import java.net.*;
+
+public class HTTP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HttpURLConnection con = new HttpURLConnection(new URL("http://www.limundo.com"));
+		
+		
+		
+		
+		
+	}
+
+}

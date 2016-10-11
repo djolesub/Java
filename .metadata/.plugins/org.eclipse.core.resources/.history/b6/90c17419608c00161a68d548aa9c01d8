@@ -1,0 +1,15 @@
+package intro;
+import java.net.*;
+
+public class URLDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		URLDemo url = new URLDemo("http://www.google.com");
+		
+		
+		
+		
+	}
+
+}

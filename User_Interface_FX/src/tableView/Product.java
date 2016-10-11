@@ -1,0 +1,47 @@
+package tableView;
+
+public class Product {
+	private String name;
+	private double price;
+	private int qyt;
+	
+	public Product(String name,double price,int qyt){
+		this.name = name;
+		this.price = price;
+		this.qyt = qyt;
+	} 
+	
+	public Product(){
+		name = "";
+		price = 0;
+		qyt = 0;
+	}
+	
+	//Getters and Setters
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQyt() {
+		return qyt;
+	}
+
+	public void setQyt(int qyt) {
+		this.qyt = qyt;
+	}
+	
+	
+
+}

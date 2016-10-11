@@ -1,0 +1,17 @@
+package windowsComunication;
+
+public class SecondWindow {
+	public static void display(String title,String Message) throws Exception{
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

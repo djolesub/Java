@@ -1,0 +1,22 @@
+package intro;
+import java.net.*;
+
+public class NetworksIntro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			InetAddress[] ip = InetAddress.getAllByName("www.machine.com");
+			for(InetAddress i:ip){
+				System.out.println(i);
+			}
+		}
+		catch(UnknownHostException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

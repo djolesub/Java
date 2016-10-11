@@ -1,0 +1,52 @@
+package windowsComunication;
+
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+
+public class SecondWindow {
+	static boolean answer;
+	
+	public static boolean display(String title,String message) throws Exception{
+		Stage stage = new Stage(); 
+		stage.setTitle(title); 
+		stage.initModality(Modality.APPLICATION_MODAL);;
+		Label label = new Label(message);
+		
+		//Create two buttons
+		Button btYES = new Button("YES");
+		btYES.setOnAction(e->{
+			answer = false;
+			stage.close();
+			
+		}); 
+		
+		Button btNO = new Button("NO");
+		btNO.setOnAction(e->{
+			answer = true;
+			stage.close();
+			
+		}); 
+		
+		VBox st = new VBox(20);
+		st.getChildren().addAll(btYES,btNO,label); 
+		st.setAlignment(Pos.CENTER);
+		
+		Scene scene = new Scene(st,300,100); 
+		stage.setScene(scene);
+		stage.show();
+		return answer;
+	}
+
+	
+}

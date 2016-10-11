@@ -1,0 +1,49 @@
+package intro;
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+
+public class MultipleSceens extends Application{
+	Stage window;
+	Scene scene1,scene2;
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		launch(args);
+	}
+	
+	@Override 
+	public void start(Stage primaryScene) throws Exception {
+		window = primaryScene;
+		Label label1 = new Label("Welcome to first Sceene");
+		Button bt1 = new Button();
+		bt1.setText("Go to Scene 2"); 
+		bt1.setOnAction(e->window.setScene(scene2)); 
+		
+		//LayoutI - Children are layout in vertical column 
+		
+		VBox layout1 = new VBox(20); 
+		layout1.addChildren().addAll(label1,bt1); 
+		Scene scene = new Scene(layout1,500,700); 
+		
+		//Button 2 
+		Button bt2 = new Button();
+		bt1.setText("Back to Scene 1"); 
+		bt1.setOnAction(e->window.setScene(scene1)); 
+		
+	}
+	
+	
+	
+	
+
+}

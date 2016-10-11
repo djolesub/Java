@@ -1,0 +1,26 @@
+package intro;
+import java.net.*;
+
+public class URLDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try{
+			URL url = new URL("http://www.limundo.com");
+			System.out.println("Information about URL:");
+			System.out.println("Protocol: "+url.getProtocol());
+			System.out.println("Path: "+url.getPath());
+			System.out.println("Host: "+url.getHost());
+			System.out.println("Query: "+url.getQuery());
+			
+			
+		}
+		catch(MalformedURLException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

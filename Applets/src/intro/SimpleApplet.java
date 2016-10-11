@@ -3,16 +3,25 @@ import java.awt.*;
 import java.applet.*;
 
 public class SimpleApplet extends Applet{
-
+	String msg;
+	
+	//Set background and foreground color 
+	public void init(){
+		setBackground(Color.green);
+		setForeground(Color.red);
+		msg += " Inside init() method";
+	}
+	
+	//Initialize start() method 
+	public void start(){
+		msg += " Inside start() method ";
+	}
+	
 	public void paint(Graphics g){
-		g.drawString("A simple Applet",20,20);
+		msg+=" Inside paint() .";
+		g.drawString(msg,20,20);
+		showStatus("This is ststus line with status message.");
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		
-	
-	}
 
 }

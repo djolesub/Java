@@ -1,0 +1,103 @@
+package menues;
+
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.control.CheckMenuItem;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.text.Text;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane; 
+import javafx.scene.layout.GridPane; 
+import javafx.scene.control.CheckBox; 
+import javafx.scene.control.ChoiceBox; 
+import javafx.geometry.Insets;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TreeView;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.Menu;
+public class Main extends Application{
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		launch(args);
+	} 
+	
+	public void start(Stage stage){
+		stage.setTitle("Menues");
+		Menu menu1 = new Menu("_File");
+		Menu menu2 = new Menu("Edit");
+		Menu menu3 = new Menu("_View");
+		Menu menu4 = new Menu("Help");
+		
+		//Puting submenues in File 
+		Menu sub = new Menu("New");
+		sub.setOnAction(e->{
+			System.out.println("Creating new file...");
+			menu1.getItems().add(new MenuItem("Adding New Item"));
+		});
+		
+		//Disabled menu 
+		MenuItem dis = new MenuItem("Disabled");
+		menu2.getItems().add(dis);
+		dis.setOnAction(e->{
+			
+			int i = 0;
+			if(i % 2 == 0 ){
+				dis.setDisable(true);
+				System.out.println(dis.getText()+" num of times "+i);
+				i++;
+			}else {
+				dis.setDisable(false);
+				i++;
+			}
+			
+		});
+		
+		menu1.getItems().add(sub);
+		menu1.getItems().add(new MenuItem("Open File..."));
+		menu1.getItems().add(new SeparatorMenuItem());
+		menu1.getItems().add(new MenuItem("Close"));
+		menu1.getItems().add(new MenuItem("CloseAll"));
+		
+		sub.getItems().add(new MenuItem("JavaProject"));
+		sub.getItems().add(new MenuItem("Project"));
+		
+		//CheckMenuItem 
+		CheckMenuItem ch = new CheckMenuItem("CheckedMenu Item"); 
+		menu3.getItems().add(ch);
+		
+		
+		
+		
+		
+		
+		
+		MenuBar mnb = new MenuBar();
+		mnb.getMenus().addAll(menu1,menu2,menu3,menu4);
+		//Layout 
+		HBox hb = new HBox();
+		hb.getChildren().add(mnb);
+		//Create Scene 
+		Scene scene = new Scene(hb);
+		stage.setScene(scene);
+		stage.show();
+		
+	}
+
+}

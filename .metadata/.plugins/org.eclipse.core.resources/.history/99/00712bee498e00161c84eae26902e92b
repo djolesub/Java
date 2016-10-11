@@ -1,0 +1,136 @@
+package restaurant;
+
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane; 
+import javafx.scene.layout.GridPane; 
+import javafx.scene.control.CheckBox; 
+import javafx.scene.control.ChoiceBox; 
+import javafx.geometry.Insets;
+import javafx.scene.control.TextField;
+
+public class Menu extends Application{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		launch(args);
+	}
+	
+	@Override
+	public void start(Stage stage){
+		stage.setTitle("Restaurant menu");
+		GridPane grid = new GridPane();
+		grid.setPadding(new Insets(10,10,10,10)); 
+		grid.setVgap(8);
+		grid.setHgap(8); 
+		
+		Label title = new Label("Choose Dish:"); 
+		TextField launch = new TextField();
+		
+		//Create CheckBox Dishes
+		CheckBox pizza = new CheckBox("Pizza 10$");
+		CheckBox burger = new CheckBox("Burger 20$");
+		CheckBox fries = new CheckBox("Fries 5$");
+		CheckBox sosage = new CheckBox("Sosage 40$");
+		CheckBox gyros = new CheckBox("Gyros 15$"); 
+		
+		Button amount = new Button("Amount");
+		
+		amount.setOnAction(e->{
+			int sum = 0;
+			if(pizza.isSelected()){
+				sum+=10;
+			}
+			if(burger.isSelected()){
+				sum+=20;
+			}
+			if(fries.isSelected()){
+				sum+=5;
+			}
+			if(sosage.isSelected()){
+				sum+=40;
+			}
+			if(gyros.isSelected()){
+				sum+=15;
+			}
+			launch.setText(String.valueOf(sum));
+				
+		});
+		Button reset = new Button("Reset");
+		reset.setOnAction(e->{
+			launch.clear();
+			
+		});
+		
+		//Create ChoiceBox for salads 
+		ChoiceBox<CheckBox> salads = new ChoiceBox<CheckBox>();
+		//Create Salad checkboxes
+		CheckBox mayo = new CheckBox("Mayo"); 
+		CheckBox ketchup = new CheckBox("Ketchup"); 
+		CheckBox onion = new CheckBox("Onion"); 
+		CheckBox paprika = new CheckBox("Paprika"); 
+		CheckBox cucamber = new CheckBox("Cucamber"); 
+		CheckBox mustard = new CheckBox("Mustard"); 
+		//Put items to list 
+		salads.getItems().add(mayo);
+		salads.getItems().add(ketchup);
+		salads.getItems().add(onion);
+		salads.getItems().add(paprika);
+		salads.getItems().add(cucamber);
+		salads.getItems().add(mustard);
+		
+		grid.setConstraints(title,5,0);
+		grid.setConstraints(pizza,0,3);
+		grid.setConstraints(burger,0,4);
+		grid.setConstraints(fries,0,5);
+		grid.setConstraints(sosage,0,6);
+		grid.setConstraints(gyros,0,7);
+		grid.setConstraints(salads,0,8);
+		grid.setConstraints(amount,0,9);
+		grid.setConstraints(reset,1,9);
+		grid.setConstraints(launch,0,10);
+		
+		//Creating String ChoiceBox 
+		ChoiceBox<String> names = new ChoiceBox<String>();
+		names.getItems().add("Djordje");
+		names.getItems().add("Milena");
+		names.getItems().add("Pavle");
+		names.getItems().add("Filip");
+		names.getItems().add("Puja");
+		
+		names.setValue("Puja");
+		//Selection model drop down
+		names.getSelectionModel().selectedItemProperty()
+			.addListener((v,oldValue,newValue)->System.out.println(newValue));
+		HBox b = new HBox();
+		b.getChildren().add(names);
+		grid.setConstraints(b,0,12);
+		
+		//Adding dishes to grid 
+		grid.getChildren().addAll(title,pizza,burger,fries,sosage,gyros,amount,launch,reset,salads,b);
+		
+		//Create Scene 
+		Scene scene = new Scene(grid,500,500);
+		stage.setScene(scene);
+		stage.show();
+	}
+	
+	public void getChoice(ChoiceBox<String> str){
+		System.out.println(str.getValue());
+	}
+
+}

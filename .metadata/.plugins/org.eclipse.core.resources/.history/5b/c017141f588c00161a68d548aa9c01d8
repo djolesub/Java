@@ -1,0 +1,30 @@
+package intro;
+import java.io.IOException;
+import java.net.*;
+
+public class NetworksIntro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		InetAddress ip;
+		try {
+			ip = InetAddress.getByName("www.machine.com");
+			System.out.println(ip.getHostAddress());
+			
+		}
+		catch(UnknownHostException e){
+			e.printStackTrace();
+		} 
+		
+		//Creating Socket 
+		
+		try(Socket so = new Socket(InetAddress.getByName("www.machine.com"),80);) {
+			
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		
+		}
+
+	}
+}

@@ -1,0 +1,64 @@
+package windowsComunication;
+
+import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.scene.Group;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
+
+public class WindowsComunication extends Application {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		launch(args);
+	} 
+	
+	public void start(Stage stage){
+		stage.setTitle("Main Window Title");
+		Button bt1 = new Button("Click Me");
+		bt1.setOnAction(e->{
+			try {
+				boolean result = SecondWindow.display("Title","Mesasage:Do you want to send");
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+		
+		
+		//Create layout 
+		StackPane layout = new StackPane();
+		layout.getChildren().add(bt1);
+		//Creating Scene object 
+		Scene scene = new Scene(layout,500,500);
+		stage.setScene(scene);
+		stage.show();
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
